@@ -75,17 +75,23 @@
       </button>
     </section>
     <script>
-      function canSpeakPortuguese () {
-        let country = prompt ("what's your country?");
 
-        if ( country === "Brazil" || country === "Portugal") {
-          alert ("you speak portuguese");
-        } else {
-          alert ("go learn portuguese!");
-        }
+      function applyNow () {
+        let name = prompt ("what is your firstname?");
+        let age = prompt ("how old are you?");
+
+      let h1 = document.querySelector("h1");
+      if (age >= 18) {
+        h1.innerHTML =  "Hi, "+ name +" Welcome to SheCodes!";
+      } else {
+        h1.innerHTML =  "Sorry, "+ name +" you cannot join SheCodes!";
+      }
       }
 
-      canSpeakPortuguese ();
+      let applyButton = document.querySelector("button");
+      
+      applyButton.addEventListener ("click", applyNow);
+      
     </script>
   </body>
 </html>
